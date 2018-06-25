@@ -1,9 +1,4 @@
-import math
+from math import sqrt; from itertools import count, islice
 
-def determineIfPrime(possiblePrime):
-    isPrime = True
-    for num in range(2, math.ceil(possiblePrime) -1):
-        if (possiblePrime % num == 0):
-            isPrime = False
-            break
-    return isPrime
+def determineIfPrime(n):
+    return n > 1 and all(n%i for i in islice(count(2), int(sqrt(n)-1)))

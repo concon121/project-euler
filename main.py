@@ -1,3 +1,3 @@
-from problem10.answer import init
+from problem14.answer import init
 
 init()
